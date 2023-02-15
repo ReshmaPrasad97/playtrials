@@ -13,8 +13,11 @@ import java.io.IOException;
 public class ProductController extends Controller {
     @Inject
     private ProductService productService;
-    public Result addProductdata(Http.Request request) throws IOException {
+    public Result addProductData(Http.Request request) throws IOException {
         productService.addProduct(request);
         return ok("Data Inserted");
+    }
+    public Result getProductData(Integer id) throws IOException {
+        return ok(productService.getById(id).toString());
     }
 }
