@@ -32,14 +32,14 @@ public class ProductService {
         productMap.put("productid", productId);
         productMap.put("productname", productName);
         productMap.put("specid", specId);
-        IndexRequest indexRequest = new IndexRequest("product", "_doc").source(productMap);
+        IndexRequest indexRequest = new IndexRequest("product", "_doc",String.valueOf(productId)).source(productMap);
         connectionClient.getRestHighLevelClient().index(indexRequest, RequestOptions.DEFAULT);
 
         Map<String, Object> specJson = new HashMap<>();
         specJson.put("specid", specId);
         specJson.put("productspec", productSpec);
 
-        IndexRequest indexRequest1 = new IndexRequest("productspec", "_doc").source(specJson);
+        IndexRequest indexRequest1 = new IndexRequest("productspec", "_doc",String.valueOf(specId)).source(specJson);
         connectionClient.getRestHighLevelClient().index(indexRequest1, RequestOptions.DEFAULT);
 
 
