@@ -13,8 +13,6 @@ import play.mvc.Result;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import static play.mvc.Results.notFound;
 import static play.mvc.Results.ok;
 
 public class ProductService {
