@@ -30,4 +30,13 @@ public class ProductController extends Controller {
         sqlProductService.addData(request);
         return ok("Data succesfully inserted");
     }
+
+    public Result getData(Integer specid) throws SQLException {
+        String result =sqlProductService.getData(specid);
+        return ok(result);
+    }
+    public Result getProduct(Integer specid) throws SQLException {
+        String result = sqlProductService.getProduct(specid).toString();
+        return ok(result);
+    }
 }
