@@ -1,14 +1,11 @@
 package controllers;
 
 import com.google.inject.Inject;
-import org.elasticsearch.http.HttpRequest;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
-import play.twirl.api.Content;
 import service.ProductService;
 import service.SqlProductService;
-
 import java.io.IOException;
 import java.sql.SQLException;
 
