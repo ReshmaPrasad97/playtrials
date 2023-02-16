@@ -11,4 +11,4 @@ POST  /addProductData                controllers.ProductController.addProductDat
 GET /getProductData/:id              controllers.ProductController.getProductData(id: Integer)
 POST /addProduct                     controllers.ProductController.addProduct(request : Request)
 GET /getData/:specid                 controllers.ProductController.getData(specid : Integer)
-GET /getProduct/:specid                  controllers.ProductController.getProduct(specid:Integer)
+GET /getProduct/:specid              controllers.ProductController.getProduct(specid:Integer)
