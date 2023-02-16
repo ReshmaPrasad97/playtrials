@@ -12,7 +12,6 @@ import java.sql.SQLException;
 public class ProductController extends Controller {
     @Inject
     private ProductService productService;
-
     @Inject
     private SqlProductService sqlProductService;
     public Result addProductData(Http.Request request) throws IOException {
